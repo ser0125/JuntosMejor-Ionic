@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { MainPage } from '../main/main';
 /**
@@ -15,7 +15,8 @@ import { MainPage } from '../main/main';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
+    
   }
 
   ionViewDidLoad() {
@@ -23,9 +24,10 @@ export class RegisterPage {
   }
 
   continue(){
-    this.navCtrl.setRoot(MainPage)
+    this.navCtrl.setRoot(MainPage);
+    this.menuCtrl.enable(true,"menu-one");
   }
   home(){
-    this.navCtrl.setRoot(HomePage)
+    this.navCtrl.setRoot(HomePage);
   }
 }
