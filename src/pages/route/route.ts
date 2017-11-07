@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Route2Page } from '../route2/route2';
+import { MainPage } from '../main/main';
 /**
  * Generated class for the RoutePage page.
  *
@@ -24,5 +25,8 @@ export class RoutePage {
 
   continue(){
     this.navCtrl.setRoot(Route2Page)
+  }
+  main(){
+    this.navCtrl.setRoot(MainPage)
   }
 }

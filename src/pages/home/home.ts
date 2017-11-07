@@ -19,8 +19,8 @@ export class HomePage {
   register(){
     this.navCtrl.setRoot(RegisterPage)
   }
-    SearchRoutes(){
-      this.navCtrl.push(SearchRoutesPage)
+  searchRoutes(){
+      this.navCtrl.setRoot(SearchRoutesPage)
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { RoutePage } from '../route/route';
 /**
  * Generated class for the Route2Page page.
  *
@@ -41,5 +42,7 @@ export class Route2Page {
     });
     alert.present();
   }
-
+  route(){
+    this.navCtrl.setRoot(RoutePage)
+  }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
-
+import { RoutePage } from '../route/route';
 declare var google;
 /**
  * Generated class for the MainPage page.
@@ -63,6 +63,10 @@ loadMap(position: Geoposition){
     });
     mapEle.classList.add('show-map');
   });
+}
+
+addRoute(){
+  this.navCtrl.setRoot(RoutePage)
 }
 
 }
