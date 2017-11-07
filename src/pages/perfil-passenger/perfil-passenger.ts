@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams } from 'ionic-angular';
+import { SearchRoutesPage } from '../search-routes/search-routes';
+import { RegisterPage } from '../register/register';
 /**
  * Generated class for the PerfilPassengerPage page.
  *
@@ -8,7 +9,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-perfil-passenger',
   templateUrl: 'perfil-passenger.html',
@@ -22,4 +22,11 @@ export class PerfilPassengerPage {
     console.log('ionViewDidLoad PerfilPassengerPage');
   }
 
+  searchRoutes(){
+    this.navCtrl.setRoot(SearchRoutesPage);
+  }
+
+  driverRegister(){
+    this.navCtrl.setRoot(RegisterPage);
+  }
 }

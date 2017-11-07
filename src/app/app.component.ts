@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { RoutePage } from '../pages/route/route';
 import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
+import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
 import { AboutPage } from '../pages/about/about';
 
 @Component({
@@ -17,6 +18,7 @@ export class MyApp {
 
 
     pages: Array<{title: string, component: any}>;
+    pages2:  Array<{title: string, component: any}>;
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, ) {
     this.initializeApp();
     
@@ -24,6 +26,10 @@ export class MyApp {
     this.pages = [
       { title: 'Mi perfil', component: PerfilPage },
       { title: 'Nueva ruta', component: RoutePage },
+      { title: 'Acerca de ...', component: AboutPage }
+    ];
+    this.pages2 = [
+      { title: 'Mi perfil', component: PerfilPassengerPage },
       { title: 'Acerca de ...', component: AboutPage }
     ];
   }
