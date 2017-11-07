@@ -1,0 +1,52 @@
+<!--
+  Generated template for the RoutePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear una nueva ruta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="App">
+    <ion-list>
+
+      <ion-item>
+        <p>Datos de la ruta.</p>
+      </ion-item>
+    <ion-item>
+      <ion-label stacked>Origen</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Destino</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Precio</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Cupos disponibles:</ion-label>
+      <ion-select [(ngModel)]="Rol">
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+    <button ion-button (click)="continue()">Continuar</button>
+    <button ion-button (click)="home()">Regresar</button>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>

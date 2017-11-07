@@ -1,0 +1,55 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="App">
+    <ion-list>
+
+      <ion-item>
+        <p>Por favor llena el siguiente formulario para crear una cuenta.</p>
+      </ion-item>
+    <ion-item>
+      <ion-label stacked>Usuario</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Repita su contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Correo electrónico</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Registrarse como:</ion-label>
+      <ion-select [(ngModel)]="Rol">
+        <ion-option value="C">Conductor</ion-option>
+        <ion-option value="P">Pasajero</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+    <button ion-button (click)="continue()">Continuar</button>
+    <button ion-button (click)="home()">Regresar</button>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>

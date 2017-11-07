@@ -1,0 +1,45 @@
+<!--
+  Generated template for the Route2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear una nueva ruta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-label stacke>Ruta de ida y vuelta</ion-label>
+    <ion-checkbox [(ngModel)]="cucumber" (ionChange)="updateState()"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacke>Fecha ida</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+  </ion-item>
+
+  <ion-item  *ngIf="myDate">
+    <ion-label  *ngIf="myDate" stacke>Fecha vuelta</ion-label>
+    <ion-datetime  *ngIf="myDate" displayFormat="MM/DD/YYYY"></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label stacke>Hora de salida</ion-label>
+  <ion-datetime displayFormat="HH:mm"></ion-datetime>
+</ion-item>
+<ion-item *ngIf="myDate">
+  <ion-label stacke>Hora de vuelta</ion-label>
+  <ion-datetime displayFormat="HH:mm"></ion-datetime>
+</ion-item>
+    <ion-item>
+    <button ion-button (click)="presentAlert()">Publicar ruta</button>
+    <button ion-button (click)="home()">Regresar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
