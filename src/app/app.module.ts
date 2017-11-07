@@ -12,7 +12,6 @@ import { RoutePage } from '../pages/route/route';
 import { Route2Page } from '../pages/route2/route2';
 import { SearchRoutesPage } from '../pages/search-routes/search-routes';
 import { ListRoutesPage } from '../pages/list-routes/list-routes';
-import { MyRoutePage } from '../pages/my-route/my-route';
 import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
 import { AboutPage } from '../pages/about/about';
 import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
@@ -28,7 +27,6 @@ import { CloseSessionPage } from '../pages/close-session/close-session';
     Route2Page,
     SearchRoutesPage,
     ListRoutesPage,
-    MyRoutePage,
     PerfilPage,
     AboutPage,
     PerfilPassengerPage,
@@ -48,7 +46,6 @@ import { CloseSessionPage } from '../pages/close-session/close-session';
     Route2Page,
     SearchRoutesPage,
     ListRoutesPage,
-    MyRoutePage,
     PerfilPage,
     AboutPage,
     PerfilPassengerPage,
