@@ -15,6 +15,7 @@ import { SearchRoutesPage } from '../pages/search-routes/search-routes';
 import { ListRoutesPage } from '../pages/list-routes/list-routes';
 import { MyRoutePage } from '../pages/my-route/my-route';
 import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
     SearchRoutesPage,
     ListRoutesPage,
     MyRoutePage,
-    PerfilPage
+    PerfilPage,
+    AboutPage
 
   ],
   imports: [
@@ -45,7 +47,8 @@ import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
     SearchRoutesPage,
     ListRoutesPage,
     MyRoutePage,
-    PerfilPage
+    PerfilPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

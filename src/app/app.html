@@ -23,8 +23,8 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item menuClose="menu2" detail-none>
-        Close Menu 2
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            {{p.title}}
       </button>
     </ion-list>
   </ion-content>
