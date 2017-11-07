@@ -17,8 +17,9 @@
     <ion-list>
 
       <ion-item>
-        <p>Por favor llena el siguiente formulario para crear una cuenta.</p>
+        <h1>Datos personales</h1>
       </ion-item>
+        <img [src]="base64Image" alt="server error" *ngIf="base64Image">
     <ion-item>
       <ion-label stacked>Usuario</ion-label>
       <ion-input type="text"></ion-input>
@@ -48,7 +49,7 @@
     </ion-item>
     <ion-item>
     <button ion-button (click)="continue()">Continuar</button>
-    <button ion-button (click)="home()">Regresar</button>
+    <button ion-button (click)="takePhoto()">Regresar</button>
     </ion-item>
   </ion-list>
   </div>
