@@ -16,6 +16,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class RegisterPage {
 
+  rol:String;
+  drive:Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams, public camera: Camera) {
   }
 
@@ -46,5 +48,12 @@ export class RegisterPage {
   }
   home(){
     this.navCtrl.setRoot(HomePage)
+  }
+
+  onChange(rol){
+    if(rol == "C")
+     this.drive = true;
+    else
+     this.drive = false;
   }
 }

@@ -42,14 +42,17 @@
 
     <ion-item>
       <ion-label stacked>Registrarse como:</ion-label>
-      <ion-select [(ngModel)]="Rol">
+      <ion-select [(ngModel)]="rol" (ionChange)="onChange(rol)">
         <ion-option value="C">Conductor</ion-option>
         <ion-option value="P">Pasajero</ion-option>
       </ion-select>
     </ion-item>
+    <ion-item  *ngIf="drive">
+      <button ion-button  class="button-block" (click)="takePhoto()">Agregar licencia</button>
+    </ion-item>
     <ion-item>
     <button ion-button (click)="continue()">Continuar</button>
-    <button ion-button (click)="takePhoto()">Regresar</button>
+    <button ion-button (click)="home()">Regresar</button>
     </ion-item>
   </ion-list>
   </div>
