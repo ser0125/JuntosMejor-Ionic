@@ -6,13 +6,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
+import { SearchRoutesPage } from '../pages/search-routes/search-routes';
+import { ListRoutesPage } from '../pages/list-routes/list-routes';
+import { MyRoutePage } from '../pages/my-route/my-route';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    SearchRoutesPage,
+    ListRoutesPage,
+    MyRoutePage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { LoginPage } from '../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    SearchRoutesPage,
+    ListRoutesPage,
+    MyRoutePage
   ],
   providers: [
     StatusBar,
