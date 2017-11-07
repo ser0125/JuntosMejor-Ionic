@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Crear una nueva ruta</ion-title>
   </ion-navbar>
 
@@ -37,9 +40,21 @@
   <ion-label stacke>Hora de vuelta</ion-label>
   <ion-datetime displayFormat="HH:mm"></ion-datetime>
 </ion-item>
+<<<<<<< HEAD
     <ion-item>
     <button ion-button (click)="presentAlert()">Publicar ruta</button>
     <button ion-button (click)="route()">Regresar</button>
     </ion-item>
+=======
+>>>>>>> Sergio
   </ion-list>
+  <div class="buttons">
+  <button ion-button (click)="presentAlert()">Publicar ruta</button>
+  <button ion-button (click)="routePage()">Regresar</button>
+</div>
 </ion-content>
+
+<!-- align to the bottom of the page -->
+<div class="banner">
+    <img src="https://www.usa-view.com/hermeshine/image/he_car_banner.jpg" alt="car banner" >
+      </div>

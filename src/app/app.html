@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu id="menu-one" [content]="content" enabled="false">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
@@ -8,9 +8,32 @@
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-avatar item-start>
+          <img class="avatar" src="{{p.image}}">
+        </ion-avatar>
         {{p.title}}
       </button>
     </ion-list>
   </ion-content>
 </ion-menu>
+
+<!-- Menu 2 -->
+<ion-menu id="menu-two" [content]="content" enabled="false">
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Menu 2</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages2" (click)="openPage(p)">
+        <ion-avatar item-start>
+          <img class="avatar" src="{{p.image}}">
+        </ion-avatar>
+            {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

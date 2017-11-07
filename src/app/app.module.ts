@@ -9,24 +9,29 @@ import { Camera } from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
-import { MainPage } from '../pages/main/main';
 import { RoutePage } from '../pages/route/route';
 import { Route2Page } from '../pages/route2/route2';
 import { SearchRoutesPage } from '../pages/search-routes/search-routes';
 import { ListRoutesPage } from '../pages/list-routes/list-routes';
-import { MyRoutePage } from '../pages/my-route/my-route';
+import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
+import { AboutPage } from '../pages/about/about';
+import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
+import { CloseSessionPage } from '../pages/close-session/close-session';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    MainPage,
     RoutePage,
     Route2Page,
     SearchRoutesPage,
     ListRoutesPage,
-    MyRoutePage
+    PerfilPage,
+    AboutPage,
+    PerfilPassengerPage,
+    CloseSessionPage
 
   ],
   imports: [
@@ -38,12 +43,14 @@ import { MyRoutePage } from '../pages/my-route/my-route';
     MyApp,
     HomePage,
     RegisterPage,
-    MainPage,
     RoutePage,
     Route2Page,
     SearchRoutesPage,
     ListRoutesPage,
-    MyRoutePage
+    PerfilPage,
+    AboutPage,
+    PerfilPassengerPage,
+    CloseSessionPage
   ],
   providers: [
     StatusBar,

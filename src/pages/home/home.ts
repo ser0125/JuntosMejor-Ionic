@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { NavController, MenuController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { SearchRoutesPage } from '../search-routes/search-routes';
 
@@ -10,17 +9,17 @@ import { SearchRoutesPage } from '../search-routes/search-routes';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
 
   }
-  login(){
-    this.navCtrl.setRoot(LoginPage)
-  }
+
   register(){
     this.navCtrl.setRoot(RegisterPage)
   }
-  searchRoutes(){
-      this.navCtrl.setRoot(SearchRoutesPage)
+    SearchRoutes(){
+      this.navCtrl.setRoot(SearchRoutesPage);
+      this.menuCtrl.enable(false,"menu-one");
+      this.menuCtrl.enable(true,"menu-two");
   }
 
 }

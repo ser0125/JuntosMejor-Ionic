@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+<<<<<<< HEAD
 import { MainPage } from '../main/main';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 /**
+=======
+import { SearchRoutesPage } from '../search-routes/search-routes';
+import { RoutePage } from '../route/route';
+/** 
+>>>>>>> Sergio
  * Generated class for the RegisterPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
@@ -15,10 +21,16 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  Rol: any;
 
+<<<<<<< HEAD
   rol:String;
   drive:Boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams, public camera: Camera) {
+=======
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private  alertCtrl: AlertController) {
+    
+>>>>>>> Sergio
   }
 
   takePhoto(){
@@ -44,10 +56,30 @@ export class RegisterPage {
   }
 
   continue(){
-    this.navCtrl.setRoot(MainPage)
+    
+    if(this.Rol == "C"){
+    this.navCtrl.setRoot(RoutePage);
+    this.menuCtrl.enable(false,"menu-two");
+    this.menuCtrl.enable(true,"menu-one");
+    }else if(this.Rol == "P"){
+      this.navCtrl.setRoot(SearchRoutesPage);
+      this.menuCtrl.enable(false,"menu-one");
+      this.menuCtrl.enable(true,"menu-two");
+    }else{
+      this.presentAlert();
+    }
   }
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'No has podido registrarte',
+      subTitle: 'Falta que selecciones, si te registras como pasajero o conductor',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
+
   home(){
-    this.navCtrl.setRoot(HomePage)
+    this.navCtrl.setRoot(HomePage);
   }
 
   onChange(rol){

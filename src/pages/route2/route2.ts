@@ -42,7 +42,8 @@ export class Route2Page {
     });
     alert.present();
   }
-  route(){
-    this.navCtrl.setRoot(RoutePage)
+  routePage(){
+    this.navCtrl.setRoot(RoutePage);
   }
+
 }

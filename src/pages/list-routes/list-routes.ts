@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { MyRoutePage } from '../my-route/my-route';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ListRoutesPage page.
@@ -16,14 +15,25 @@ import { MyRoutePage } from '../my-route/my-route';
 })
 export class ListRoutesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListRoutesPage');
   }
-  applyRoute(){
-    this.navCtrl.push(MyRoutePage);
-  }
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+    title: '¡Solicitud enviada!',
+    subTitle: 'Su transporte llegara dentro de poco',
+    buttons: [{
+      text: 'ACEPTAR',
+      handler: () => {
+        console.log('Cancel clicked');
+      }
+    }]
+  });
+  alert.present();
+}
 
 }
