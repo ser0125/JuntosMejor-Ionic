@@ -7,21 +7,26 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { MainPage } from '../pages/main/main';
 import { RoutePage } from '../pages/route/route';
 import { Route2Page } from '../pages/route2/route2';
+import { SearchRoutesPage } from '../pages/search-routes/search-routes';
+import { ListRoutesPage } from '../pages/list-routes/list-routes';
+import { MyRoutePage } from '../pages/my-route/my-route';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage,
     RegisterPage,
     MainPage,
     RoutePage,
-    Route2Page
+    Route2Page,
+    SearchRoutesPage,
+    ListRoutesPage,
+    MyRoutePage
+
   ],
   imports: [
     BrowserModule,
@@ -31,11 +36,13 @@ import { Route2Page } from '../pages/route2/route2';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage,
     RegisterPage,
     MainPage,
     RoutePage,
-    Route2Page
+    Route2Page,
+    SearchRoutesPage,
+    ListRoutesPage,
+    MyRoutePage
   ],
   providers: [
     StatusBar,

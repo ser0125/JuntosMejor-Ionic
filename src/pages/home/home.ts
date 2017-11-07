@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
+import { SearchRoutesPage } from '../search-routes/search-routes';
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,9 @@ export class HomePage {
   }
   register(){
     this.navCtrl.setRoot(RegisterPage)
+  }
+    SearchRoutes(){
+      this.navCtrl.push(SearchRoutesPage)
   }
 
 }
