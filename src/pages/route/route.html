@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Crear una nueva ruta</ion-title>
   </ion-navbar>
 </ion-header>
@@ -43,10 +46,9 @@
         <ion-option value="4">4</ion-option>
       </ion-select>
     </ion-item>
-    <ion-item>
-    <button ion-button (click)="continue()">Continuar</button>
-    <button ion-button (click)="home()">Regresar</button>
-    </ion-item>
   </ion-list>
+  </div>
+  <div class="buttons">
+      <button ion-button (click)="continue()">Continuar</button>
   </div>
 </ion-content>

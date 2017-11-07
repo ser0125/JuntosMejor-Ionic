@@ -8,7 +8,6 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
-import { MainPage } from '../pages/main/main';
 import { RoutePage } from '../pages/route/route';
 import { Route2Page } from '../pages/route2/route2';
 import { SearchRoutesPage } from '../pages/search-routes/search-routes';
@@ -17,13 +16,14 @@ import { MyRoutePage } from '../pages/my-route/my-route';
 import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
 import { AboutPage } from '../pages/about/about';
 import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
+import { CloseSessionPage } from '../pages/close-session/close-session';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegisterPage,
-    MainPage,
     RoutePage,
     Route2Page,
     SearchRoutesPage,
@@ -31,7 +31,8 @@ import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger'
     MyRoutePage,
     PerfilPage,
     AboutPage,
-    PerfilPassengerPage
+    PerfilPassengerPage,
+    CloseSessionPage
 
   ],
   imports: [
@@ -43,7 +44,6 @@ import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger'
     MyApp,
     HomePage,
     RegisterPage,
-    MainPage,
     RoutePage,
     Route2Page,
     SearchRoutesPage,
@@ -51,7 +51,8 @@ import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger'
     MyRoutePage,
     PerfilPage,
     AboutPage,
-    PerfilPassengerPage
+    PerfilPassengerPage,
+    CloseSessionPage
   ],
   providers: [
     StatusBar,

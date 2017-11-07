@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { RoutePage } from '../route/route';
 
 
 @Component({
@@ -18,5 +19,8 @@ export class PerfilPage {
 
   driverRegister(){
     this.navCtrl.setRoot(RegisterPage);
+  }
+  searchRoutes(){
+    this.navCtrl.setRoot(RoutePage);
   }
 }

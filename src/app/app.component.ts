@@ -8,6 +8,7 @@ import { RoutePage } from '../pages/route/route';
 import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
 import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
 import { AboutPage } from '../pages/about/about';
+import { CloseSessionPage } from '../pages/close-session/close-session';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,12 +26,13 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Mi perfil', component: PerfilPage },
-      { title: 'Nueva ruta', component: RoutePage },
-      { title: 'Acerca de ...', component: AboutPage }
+      { title: 'Acerca de ...', component: AboutPage },
+      { title: 'Cerrar sesión', component: CloseSessionPage }
     ];
     this.pages2 = [
       { title: 'Mi perfil', component: PerfilPassengerPage },
-      { title: 'Acerca de ...', component: AboutPage }
+      { title: 'Acerca de ...', component: AboutPage },
+      { title: 'Cerrar sesión', component: CloseSessionPage }
     ];
   }
 

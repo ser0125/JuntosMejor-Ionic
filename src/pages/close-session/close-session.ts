@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams } from 'ionic-angular';
+import { HomePage} from '../home/home';
 /**
  * Generated class for the CloseSessionPage page.
  *
@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-close-session',
   templateUrl: 'close-session.html',
@@ -16,10 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CloseSessionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.navCtrl.setRoot(HomePage);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CloseSessionPage');
   }
+
 
 }

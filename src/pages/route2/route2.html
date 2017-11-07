@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Crear una nueva ruta</ion-title>
   </ion-navbar>
 
@@ -37,9 +40,9 @@
   <ion-label stacke>Hora de vuelta</ion-label>
   <ion-datetime displayFormat="HH:mm"></ion-datetime>
 </ion-item>
-    <ion-item>
-    <button ion-button (click)="presentAlert()">Publicar ruta</button>
-    <button ion-button (click)="home()">Regresar</button>
-    </ion-item>
   </ion-list>
+  <div class="buttons">
+  <button ion-button (click)="presentAlert()">Publicar ruta</button>
+  <button ion-button (click)="home()">Regresar</button>
+</div>
 </ion-content>
