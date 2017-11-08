@@ -1,4 +1,17 @@
 page-register {
+  .big {
+    background-image: url("http://static.starschema.net/wp-content/uploads/2017/05/22160848/road-wallpaper-59122e556e79e.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input {
+     opacity: 0.8;
+     height: 100%;
+  }
   img{
       border-radius: 100%;
     }

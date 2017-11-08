@@ -4,37 +4,40 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 --><ion-header>
-    
+
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
           </button>
         <ion-title>Perfil</ion-title>
       </ion-navbar>
-    
+
     </ion-header>
     <ion-content>
-    <ion-list>
-    
-      <ion-item>
-        <ion-label stacked>Usuario</ion-label>
-        <ion-input type="text" placeholder="Sergio.llanos15"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Email</ion-label>
-        <ion-input type="email" placeholder="sergio.llanos@gmail.com"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Mi ruta favorita</ion-label>
-        <ion-input type="text" placeholder="Calle 45A#80-66"></ion-input>
-      </ion-item>
-    </ion-list>
-    <div class="buttons">
-    <button ion-button (click)="driverRegister()">Registrarse como conductor</button>
-    </div>
-    <div class="buttons">
-    <button ion-button (click)="searchRoutes()">Regresar</button>
-    </div>
+      <div class="big">
+        <ion-list>
+           <div class="input">
+             <ion-item>
+               <ion-label stacked>Usuario</ion-label>
+               <ion-input type="text" placeholder="Sergio.llanos15"></ion-input>
+             </ion-item>
+             <ion-item>
+               <ion-label stacked>Email</ion-label>
+               <ion-input type="email" placeholder="sergio.llanos@gmail.com"></ion-input>
+             </ion-item>
+             <ion-item>
+               <ion-label stacked>Mi ruta favorita</ion-label>
+               <ion-input type="text" placeholder="Calle 45A#80-66"></ion-input>
+             </ion-item>
+           </div>
+        <div class="buttons">
+        <button ion-button (click)="driverRegister()">Registrarse como conductor</button>
+        </div>
+        <div class="buttons">
+        <button ion-button (click)="searchRoutes()">Regresar</button>
+        </div>
+        </ion-list>
+      </div>
 </ion-content>
 
 <!-- align to the bottom of the page -->

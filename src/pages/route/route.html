@@ -15,46 +15,46 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div class="App">
+<ion-content>
+  <div class="big">
     <ion-list>
+      <div class="input">
+        <ion-item>
+          <h1>Datos de la ruta</h1>
+        </ion-item>
+      <ion-item>
+        <ion-label stacked>Origen</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
 
       <ion-item>
-        <p>Datos de la ruta.</p>
+        <ion-label stacked>Destino</ion-label>
+        <ion-input type="text"></ion-input>
       </ion-item>
-    <ion-item>
-      <ion-label stacked>Origen</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Destino</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label stacked>Precio</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Precio</ion-label>
-      <ion-input type="number"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Cupos disponibles:</ion-label>
-      <ion-select [(ngModel)]="Rol">
-        <ion-option value="1">1</ion-option>
-        <ion-option value="2">2</ion-option>
-        <ion-option value="3">3</ion-option>
-        <ion-option value="4">4</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  </div>
+      <ion-item>
+        <ion-label stacked>Cupos disponibles:</ion-label>
+        <ion-select [(ngModel)]="Rol">
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+        </ion-select>
+      </ion-item>
+      </div>
   <div class="buttons">
     <button ion-button (click)="continue()">Continuar</button>
     <button ion-button (click)="main()">Regresar</button>
   </div>
+  </ion-list>
+  <!-- align to the bottom of the page -->
+  <div class="banner">
+      <img src="https://www.usa-view.com/hermeshine/image/he_car_banner.jpg" alt="car banner" >
+  </div>
+  </div>
 </ion-content>
-
-<!-- align to the bottom of the page -->
-<div class="banner">
-    <img src="https://www.usa-view.com/hermeshine/image/he_car_banner.jpg" alt="car banner" >
-      </div>

@@ -12,43 +12,45 @@
 
 </ion-header>
 
-<ion-content padding>
-  <div class="App">
+<ion-content>
+  <div class="big">
     <ion-list>
       <ion-item>
         <h1>Datos personales</h1>
       </ion-item>
         <img [src]="base64Image" alt="server error" *ngIf="base64Image">
-    <ion-item>
-      <ion-label stacked>Usuario</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+        <div class="input">
+          <ion-item>
+            <ion-label stacked>Usuario</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label stacked>Contraseña</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Repita su contraseña</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label stacked>Repita su contraseña</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Correo electrónico</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label stacked>Correo electrónico</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label stacked>Registrarse como:</ion-label>
-      <ion-select [(ngModel)]="rol" (ionChange)="onChange(rol)">
-        <ion-option value="C">Conductor</ion-option>
-        <ion-option value="P">Pasajero</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item  *ngIf="drive">
-      <button ion-button  class="button-block" (click)="takePhoto()">Agregar licencia</button>
-    </ion-item>
+          <ion-item>
+            <ion-label stacked>Registrarse como:</ion-label>
+            <ion-select [(ngModel)]="rol" (ionChange)="onChange(rol)">
+              <ion-option value="C">Conductor</ion-option>
+              <ion-option value="P">Pasajero</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item *ngIf="drive">
+            <button ion-button  class="button-block" (click)="takePhoto()">Agregar licencia</button>
+          </ion-item>
+        </div>
     <div class="buttons">
     <button ion-button (click)="continue()">Continuar</button>
     <button ion-button (click)="home()">Regresar</button>

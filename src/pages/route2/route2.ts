@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { RoutePage } from '../route/route';
+import { MainPage } from '../main/main';
 /**
  * Generated class for the Route2Page page.
  *
@@ -36,7 +37,7 @@ export class Route2Page {
       buttons: [{
         text: 'ACEPTAR',
         handler: () => {
-          console.log('Cancel clicked');
+          this.navCtrl.setRoot(MainPage);
         }
       }]
     });

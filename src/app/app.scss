@@ -14,7 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
+.big {
+  background-image: url("http://static.starschema.net/wp-content/uploads/2017/05/22160848/road-wallpaper-59122e556e79e.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+   opacity: 0.8;
+}
 .buttons{
     margin-top:20px;
     text-align: center;

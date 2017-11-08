@@ -5,30 +5,33 @@
             </button>
         <ion-title>Perfil</ion-title>
       </ion-navbar>
-    
+
     </ion-header>
     <ion-content>
-    <ion-list>
-    
-      <ion-item>
-        <ion-label stacked>Usuario</ion-label>
-        <ion-input type="text" placeholder="Sergio.llanos15"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Email</ion-label>
-        <ion-input type="email" placeholder="sergio.llanos@gmail.com"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked>Millas recorridas</ion-label>
-        <ion-label >27.000</ion-label>
-      </ion-item>
-    </ion-list>
-    <div class="buttons">
-    <button ion-button (click)="driverRegister()">Registrarse como pasajero</button>
-    </div>
-    <div class="buttons">
-        <button ion-button (click)="searchRoutes()">Regresar</button>
+      <div class="big">
+        <ion-list>
+          <div class="input">
+            <ion-item>
+              <ion-label stacked>Usuario</ion-label>
+              <ion-input type="text" placeholder="Sergio.llanos15"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Email</ion-label>
+              <ion-input type="email" placeholder="sergio.llanos@gmail.com"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Millas recorridas</ion-label>
+              <ion-label >27.000</ion-label>
+            </ion-item>
+          </div>
+        <div class="buttons">
+        <button ion-button (click)="driverRegister()">Registrarse como pasajero</button>
         </div>
+        <div class="buttons">
+            <button ion-button (click)="searchRoutes()">Regresar</button>
+        </div>
+      </ion-list>
+      </div>
 </ion-content>
 
 <!-- align to the bottom of the page -->

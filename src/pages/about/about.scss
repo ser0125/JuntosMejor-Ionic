@@ -5,8 +5,17 @@ page-about {
     text-align: center;
 }
 .logo-udea{
-    width: 40%;
-    height: 40%;
-    margin-top:20px;
-    margin-bottom:20px;
+    width: 60%;
+    height: 60%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.about {
+  background-image: url("http://hiladt.com/wordpress/wp-content/uploads/Light-Gray-Background-Png-light-grey-background-pattern-i31-114065.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
