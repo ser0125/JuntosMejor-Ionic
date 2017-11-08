@@ -17,7 +17,7 @@ import { PerfilPage } from '../pages/perfil-driver/perfil-driver';
 import { AboutPage } from '../pages/about/about';
 import { PerfilPassengerPage } from '../pages/perfil-passenger/perfil-passenger';
 import { CloseSessionPage } from '../pages/close-session/close-session';
-
+import { MainPage } from '../pages/main/main';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { CloseSessionPage } from '../pages/close-session/close-session';
     PerfilPage,
     AboutPage,
     PerfilPassengerPage,
-    CloseSessionPage
+    CloseSessionPage,
+    MainPage
 
   ],
   imports: [
@@ -50,7 +51,8 @@ import { CloseSessionPage } from '../pages/close-session/close-session';
     PerfilPage,
     AboutPage,
     PerfilPassengerPage,
-    CloseSessionPage
+    CloseSessionPage,
+    MainPage
   ],
   providers: [
     StatusBar,

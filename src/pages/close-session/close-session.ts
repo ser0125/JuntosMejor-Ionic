@@ -23,9 +23,4 @@ export class CloseSessionPage {
     console.log('ionViewDidLoad CloseSessionPage');
   }
 
-
-<<<<<<< HEAD:src/pages/my-route/my-route.ts
-
-=======
->>>>>>> Sergio:src/pages/close-session/close-session.ts
 }

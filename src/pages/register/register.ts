@@ -1,36 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
-<<<<<<< HEAD
+import { RoutePage } from '../route/route';
+import { SearchRoutesPage } from '../search-routes/search-routes';
 import { MainPage } from '../main/main';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-/**
-=======
-import { SearchRoutesPage } from '../search-routes/search-routes';
-import { RoutePage } from '../route/route';
-/** 
->>>>>>> Sergio
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  Rol: any;
 
-<<<<<<< HEAD
+
   rol:String;
   drive:Boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public camera: Camera) {
-=======
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private  alertCtrl: AlertController) {
-    
->>>>>>> Sergio
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private  alertCtrl: AlertController, public camera: Camera) {
+
   }
 
   takePhoto(){
@@ -56,12 +44,12 @@ export class RegisterPage {
   }
 
   continue(){
-    
-    if(this.Rol == "C"){
-    this.navCtrl.setRoot(RoutePage);
+
+    if(this.rol == "C"){
+    this.navCtrl.setRoot(MainPage);
     this.menuCtrl.enable(false,"menu-two");
     this.menuCtrl.enable(true,"menu-one");
-    }else if(this.Rol == "P"){
+  }else if(this.rol == "P"){
       this.navCtrl.setRoot(SearchRoutesPage);
       this.menuCtrl.enable(false,"menu-one");
       this.menuCtrl.enable(true,"menu-two");

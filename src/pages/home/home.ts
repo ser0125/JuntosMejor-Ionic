@@ -16,7 +16,7 @@ export class HomePage {
   register(){
     this.navCtrl.setRoot(RegisterPage)
   }
-    SearchRoutes(){
+    searchRoutes(){
       this.navCtrl.setRoot(SearchRoutesPage);
       this.menuCtrl.enable(false,"menu-one");
       this.menuCtrl.enable(true,"menu-two");
