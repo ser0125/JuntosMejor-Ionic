@@ -22,7 +22,7 @@ export class SearchRoutesPage {
    private geolocation: Geolocation)  {
   }
   search(){
-    this.navCtrl.push(ListRoutesPage);
+    this.navCtrl.setRoot(ListRoutesPage);
   }
 
   ionViewDidLoad() {

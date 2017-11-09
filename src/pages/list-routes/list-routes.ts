@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-
+import { SearchRoutesPage } from '../search-routes/search-routes';
 /**
  * Generated class for the ListRoutesPage page.
  *
@@ -8,7 +8,7 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
- 
+
 @Component({
   selector: 'page-list-routes',
   templateUrl: 'list-routes.html',
@@ -29,7 +29,7 @@ export class ListRoutesPage {
     buttons: [{
       text: 'ACEPTAR',
       handler: () => {
-        console.log('Cancel clicked');
+        this.navCtrl.setRoot(SearchRoutesPage);
       }
     }]
   });
