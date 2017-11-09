@@ -5,6 +5,7 @@ import { RoutePage } from '../route/route';
 import { SearchRoutesPage } from '../search-routes/search-routes';
 import { MainPage } from '../main/main';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -13,13 +14,19 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class RegisterPage {
 
-
+  registerForm: FormGroup;
   rol:String;
   drive:Boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private  alertCtrl: AlertController, public camera: Camera) {
-
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, 
+    private  alertCtrl: AlertController, public camera: Camera, public formBuilder: FormBuilder) {
+    this.registerForm = formBuilder.group({
+      username: ['',Validators.required],
+      password: ['',Validators.required],
+      repeatpassword: ['',Validators.required],
+      email: ['',Validators.required]
+  });
+}
 
   takePhoto(){
     const options: CameraOptions = {
@@ -44,7 +51,7 @@ export class RegisterPage {
   }
 
   continue(){
-
+    if(this.registerForm.valid){
     if(this.rol == "C"){
     this.navCtrl.setRoot(MainPage);
     this.menuCtrl.enable(false,"menu-two");
@@ -56,11 +63,23 @@ export class RegisterPage {
     }else{
       this.presentAlert();
     }
+  }else{
+    this.emptyAlert();
+  }
   }
   presentAlert() {
     let alert = this.alertCtrl.create({
       title: 'No has podido registrarte',
       subTitle: 'Falta que selecciones, si te registras como pasajero o conductor',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
+
+  emptyAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Ingreso invalido',
+      subTitle: 'Campos vacios',
       buttons: ['Dismiss']
     });
     alert.present();

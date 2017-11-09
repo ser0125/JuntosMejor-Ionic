@@ -15,6 +15,7 @@
 <ion-content>
   <div class="big">
     <ion-list>
+      <form [formGroup]="registerForm">
         <div class="input">
           <ion-item>
             <h1>Datos personales</h1>
@@ -22,26 +23,26 @@
             <img [src]="base64Image" alt="server error" *ngIf="base64Image">
           <ion-item>
             <ion-label stacked>Usuario</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input formControlName="username" type="text"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label stacked>Contraseña</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input formControlName="password" type="password"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label stacked>Repita su contraseña</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input formControlName="repeatpassword" type="password"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label stacked>Correo electrónico</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input formControlName="email" type="text"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label stacked>Registrarse como:</ion-label>
-            <ion-select [(ngModel)]="rol" (ionChange)="onChange(rol)">
+            <ion-select [(ngModel)]="rol" [ngModelOptions]="{standalone: true}" (ionChange)="onChange(rol)">
               <ion-option value="C">Conductor</ion-option>
               <ion-option value="P">Pasajero</ion-option>
             </ion-select>
@@ -54,6 +55,7 @@
     <button ion-button (click)="continue()">Continuar</button>
     <button ion-button (click)="home()">Regresar</button>
     </div>
+  </form>
   </ion-list>
   </div>
 </ion-content>
